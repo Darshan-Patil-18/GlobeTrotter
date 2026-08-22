@@ -1,15 +1,10 @@
 # 🌍 GlobeTrotter — Empowering Personalized Travel Planning
 
-> **Live Demo**: [https://rococo-phoenix-74e9ae.netlify.app/register](https://rococo-phoenix-74e9ae.netlify.app/register)
-
-A modern, full-stack travel planning web application built to design, organize, and manage multi-city itineraries, budget breakdowns, community experiences, and travel calendars.
-
----
 
 ## 🌐 Live Web Application
 
 Access the live deployed application here:
-👉 **[GlobeTrotter Live App](https://rococo-phoenix-74e9ae.netlify.app/register)** (`https://rococo-phoenix-74e9ae.netlify.app/register`)
+👉 **[GlobeTrotter Live App] https://globetrotterrr.netlify.app/register
 
 ---
 
