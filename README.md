@@ -1,14 +1,24 @@
 # 🌍 GlobeTrotter — Empowering Personalized Travel Planning
 
+> **Live Demo**: [https://rococo-phoenix-74e9ae.netlify.app/register](https://rococo-phoenix-74e9ae.netlify.app/register)
+
 A modern, full-stack travel planning web application built to design, organize, and manage multi-city itineraries, budget breakdowns, community experiences, and travel calendars.
+
+---
+
+## 🌐 Live Web Application
+
+Access the live deployed application here:
+👉 **[GlobeTrotter Live App](https://rococo-phoenix-74e9ae.netlify.app/register)** (`https://rococo-phoenix-74e9ae.netlify.app/register`)
 
 ---
 
 ## 🚀 Key Features
 
 * **Interactive Trip Builder**: Create multi-city trips with customizable itinerary sections, dates, and physical activity schedules.
+* **Inline Activity & Spend Fields**: Add itemized activities, hotel costs, and cab expenses directly inside itinerary sections with instant budget calculation.
 * **Stacked Budget & Expense Tracker**: View total trip budgets, itemized section activity costs, and extra expenses in stacked real-time views.
-* **Explore & Search Engine**: Discover top destinations and curated regions powered by GeoDB and Unsplash APIs. Direct "Add to Trip" integration pre-fills trip planning forms.
+* **Explore & Search Engine**: Discover top destinations and curated regions (*Gujarat*, *Rajasthan*, *Kerala*, *Goa*, *Himachal*, etc.) with direct "+ Add to Trip" pre-filling.
 * **Interactive My Trips Hub**: Real-time searching, grouping, status filtering (*Ongoing*, *Upcoming*, *Completed*), and sorting (*Name*, *Budget*, *Recent*).
 * **Interactive Travel Calendar**: Visual month/year view mapping trip date ranges with automatic month jumping when selecting specific trips.
 * **Live Community Feed**: Share travel experiences, post updates with custom user profile photos and full author names, and search community posts.
@@ -24,6 +34,7 @@ A modern, full-stack travel planning web application built to design, organize, 
 | **Frontend** | React 18, TypeScript, Tailwind CSS, Vite, Lucide Icons, Sonner Toasts, Wouter Routing |
 | **Backend** | Node.js, Express, tRPC, Axios |
 | **Database & Auth** | Supabase (PostgreSQL, Row Level Security, Auth Services, Storage Buckets) |
+| **Hosting & Deployment** | Netlify Continuous Deployment |
 | **APIs & Services** | GeoDB RapidAPI, Unsplash API, OpenTripMap API |
 
 ---

@@ -1,5 +1,9 @@
 import "dotenv/config";
 import express from "express";
+
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = "development";
+}
 import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";

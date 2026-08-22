@@ -4,24 +4,26 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { AuthProvider } from "./contexts/AuthContext";
 import Home from "./pages/Home";
 import AuthPage from "./pages/AuthPage";
 import PublicSharePage from "./pages/PublicSharePage";
 import AdminRoute from "./pages/AdminRoute";
-import AuthGuard from "./components/AuthGuard";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/"><AuthGuard><Home initialActive="overview" /></AuthGuard></Route>
-      <Route path="/trips"><AuthGuard><Home initialActive="trips" /></AuthGuard></Route>
-      <Route path="/explore"><AuthGuard><Home initialActive="explore" /></AuthGuard></Route>
-      <Route path="/itinerary"><AuthGuard><Home initialActive="itinerary" /></AuthGuard></Route>
-      <Route path="/calendar"><AuthGuard><Home initialActive="calendar" /></AuthGuard></Route>
-      <Route path="/community"><AuthGuard><Home initialActive="community" /></AuthGuard></Route>
+      <Route path="/"><Home initialActive="overview" /></Route>
+      <Route path="/trips"><Home initialActive="trips" /></Route>
+      <Route path="/explore"><Home initialActive="explore" /></Route>
+      <Route path="/itinerary"><Home initialActive="itinerary" /></Route>
+      <Route path="/itinerary/:id"><Home initialActive="itinerary" /></Route>
+      <Route path="/budget"><Home initialActive="budget" /></Route>
+      <Route path="/calendar"><Home initialActive="calendar" /></Route>
+      <Route path="/community"><Home initialActive="community" /></Route>
       <Route path="/analytics"><AdminRoute /></Route>
       <Route path="/admin"><AdminRoute /></Route>
-      <Route path="/settings"><AuthGuard><Home initialActive="settings" /></AuthGuard></Route>
+      <Route path="/settings"><Home initialActive="settings" /></Route>
       <Route path="/login"><AuthPage mode="login" /></Route>
       <Route path="/register"><AuthPage mode="register" /></Route>
       <Route path="/forgot"><AuthPage mode="forgot" /></Route>
@@ -37,10 +39,12 @@ export default function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <AuthProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
